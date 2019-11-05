@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>JavaScript 打字游戏</title>
+   <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+   <div id="container">
+      <!-- 游戏开始的界面 -->
+      <div id="gameStart">
+         <!-- 开始游戏按钮 -->
+         <div id="start"></div>
+         <!-- 游戏说明按钮 -->
+         <div id="describe"></div>
+         <div id="des">
+            我是一段认认真真的游戏说明。
+            <div id="cl">关闭</div>
+         </div>
+      </div>
+      <!-- 进入游戏界面 -->
+      <div id="game">
+         <!-- 四个操作按钮，使用了事件委托进行js交互 -->
+         <div id="oprate">
+            <span class="start">开始</span>
+            <span class="exit">退出</span>
+            <span class="finish">结束</span>
+            <span class="set">设置</span>
+         </div>
+
+         <!-- 点击设置弹出游戏难度选择 -->
+         <div id="select">
+            <!-- 一开始是隐藏的 -->
+            <select name="" id="">
+               <option value="3">慢</option>
+               <option value="2">中</option>
+               <option value="1">快</option>
+            </select>
+            <!-- 关闭按钮 -->
+            <span id="close">关闭</span>
+         </div>
+
+         <!-- 提示打字的得分、正确率和速度 -->
+         <div id="tip">
+            <p>得分： <span>0</span> 分</p>
+            <p>正确率：<span>0 %</span></p>
+            <p>速度：<span>0 </span>个 / 分</p>
+         </div>
+      </div>
+   </div>
+   <script src="./main.js"></script>
+   <script src="./keyValue.js"></script>
+</body>
+
+</html>
