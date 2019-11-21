@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <style>
+      body{
+         margin: 0;
+         padding: 0;
+         /* 通过设置高度不同来控制上下滚动条的显示和隐藏 */
+         height: 720px;
+      }
+   </style>
+</head>
+<body>
+   <!-- 注意: 给iframe设置高100%并不会起作用,因为高度继承自父级 -->
+   <iframe src="https://www.baidu.com" frameborder="0" width="100%" height="100%"></iframe>
+</body>
+</html>
+
+总结:
+1.iframe嵌套网页,设置的高度是会继承自父级 body 的;
+2.通过调整父级高度来显示隐藏上下滚动条;

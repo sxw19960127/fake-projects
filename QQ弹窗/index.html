@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <style>
+      *{
+         margin: 0;
+         padding: 0;
+      }
+   </style>
+</head>
+<body>
+   <div id="aim" style="width: 200px;height: 200px;background-color: pink;position: fixed;right: 0;bottom: 0;border: 3px solid black;"></div>
+   <script>
+      let aim = document.getElementById('aim'),
+          flag = 0;
+
+      let move = setInterval(function() {
+         if(flag <= 200) {
+            flag += 2;
+            aim.style.height = flag + 'px'
+         }else {
+            aim.style.height = 200 + 'px'
+            clearInterval(move)
+         }
+      }, 20)
+   </script>
+</body>
+</html>
+
+开启定时器实现小方块的运动 - 思路:
+   let flag = 0
+   let 变量 = setInterval(function, time);
+   逻辑代码: 通过判断 flag 与 小方块整体高度的比较:
+      如果小于,则 flag 加加,并且将值赋给目标元素的高度属性
+      否则,强制将目标元素的高度固定在指定高度,清除定时器
