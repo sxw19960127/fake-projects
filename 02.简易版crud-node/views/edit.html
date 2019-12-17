@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+</head>
+<body>
+   <h1>添加学生</h1>
+   <form action="/students/edit" method="post">
+      <input type="hidden" value="{{ student.id }}" name="id">
+      <div>
+         <label for="">姓名</label>
+         <input id="" type="text" name="name" value="{{ student.name }}">
+      </div>
+      <div>
+         <label for="">性别</label>
+         <label for="">
+            <input type="radio" name="gender" value="0">男
+         </label>
+         <label for="">
+            <input type="radio" name="gender" value="1">女
+         </label>
+      </div>
+      <div>
+         <label for="">年龄</label>
+         <input type="number" name="age" value="{{ student.age }}">
+      </div>
+      <div>
+         <label for="">爱好</label>
+         <input type="text" name="hobbies" value="{{ student.hobbies }}">
+      </div>
+      <button type="submit">提交</button>
+   </form>
+</body>
+</html>

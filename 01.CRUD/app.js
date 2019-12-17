@@ -16,6 +16,8 @@ var fs = require('fs')
 // 第3步: 引入 router 文件,也就是引入了一个函数
 var router = require('./router')
 
+var bodyParser = require('body-parser')
+
 var app = express()
 
 // 将 node_modules 和 public 文件夹开放出来
@@ -70,6 +72,16 @@ app.engine('html', require('express-art-template'))
 
 // 第4步: 注册路由,执行函数,并且将 app 作为参数传递进去
 // router(app)
+
+
+
+// 配置模板引擎和 body-parser 一定要在app.use(router)挂载路由之前
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
+
+
 
 // d
 app.use(router)
